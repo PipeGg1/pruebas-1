@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe sobre UML y Patrones de Diseño</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #0072bc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header img {
+            margin-right: 20px;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 10px 0;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 30px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #0072bc;
+            border-bottom: 2px solid #0072bc;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        img {
+            margin: 10px 0;
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* Adaptación a móviles */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            main {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="https://bogota.gov.co/sites/default/files/inline-images/logosena.png" width="120" alt="Logo SENA">
+        <div>
+            <h1>ANÁLISIS Y DESARROLLO DE SOFTWARE</h1>
+            <h2>GA4-220501095-AA2-EV03</h2>
+            <h3>Aprendiz: Juan Felipe Gómez González</h3>
+            <h4>Ficha: 2977341</h4>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Introducción</h2>
+            <p>
+                El Lenguaje Unificado de Modelado (UML) es un lenguaje estándar para especificar, visualizar, construir y documentar los artefactos de un sistema. UML proporciona un conjunto de notaciones que permiten a los desarrolladores y arquitectos de software describir de manera precisa los componentes, relaciones y comportamientos de un sistema.
+            </p>
+        </section>
+
+        <section>
+            <h2>¿Qué es UML?</h2>
+            <p>
+                UML es un lenguaje utilizado para visualizar, especificar, construir y documentar los componentes de un sistema de software. Es especialmente útil en el desarrollo de software orientado a objetos, pero también se puede aplicar en otros campos como la ingeniería de sistemas y la gestión de procesos empresariales.
+            </p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/UML_logo.svg/640px-UML_logo.svg.png" alt="Logo UML">
+        </section>
+
+        <section>
+            <h2>Principales características</h2>
+            <ul>
+                <li><strong>Lenguaje modelado:</strong> UML no es un lenguaje de programación, sino un lenguaje para crear diagramas que describen sistemas de software. Estos diagramas ayudan a entender la estructura y el comportamiento de un sistema.</li>
+                <li><strong>Notación estándar:</strong> UML proporciona una notación estándar aceptada mundialmente que permite a diferentes equipos trabajar de forma coherente.</li>
+                <li><strong>Flexible:</strong> Puede aplicarse en diferentes metodologías de desarrollo de software, ya sea en enfoques ágiles, en cascada u otros.</li>
+                <li><strong>Modelado de sistemas orientados a objetos:</strong> UML está diseñado para representar sistemas orientados a objetos, aunque también puede usarse en otros tipos de sistemas.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Diagramas UML</h2>
+            <h3>Se dividen en dos secciones:</h3>
+            <ul>
+                <li><strong>Diagramas Estructurales</strong>
+                    <ul>
+                        <li><strong>Diagrama de clases:</strong> Muestra las clases de un sistema, sus atributos, métodos y las relaciones entre ellas.</li>
+                        <li><strong>Diagrama de objetos:</strong> Representa instancias específicas de clases en un momento particular.</li>
+                        <li><strong>Diagrama de componentes:</strong> Describe los componentes físicos del sistema y las interacciones entre ellos.</li>
+                        <li><strong>Diagrama de despliegue:</strong> Muestra la arquitectura de hardware del sistema y cómo los componentes de software se distribuyen.</li>
+                        <li><strong>Diagrama de paquetes:</strong> Organiza elementos de un sistema en grupos para mostrar su estructura modular.</li>
+                    </ul>
+                </li>
+                <li><strong>Diagramas Comportamentales</strong>
+                    <ul>
+                        <li><strong>Diagrama de casos de uso:</strong> Muestra las interacciones entre los actores externos y el sistema.</li>
+                        <li><strong>Diagrama de secuencia:</strong> Representa la interacción entre objetos a lo largo del tiempo.</li>
+                        <li><strong>Diagrama de actividad:</strong> Representa flujos de trabajo o procesos dentro del sistema.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Patrones de Diseño</h2>
+            <p>Los patrones de diseño son soluciones generales y reutilizables a problemas comunes en el diseño de software.</p>
+            <ul>
+                <li><strong>Singleton:</strong> Asegura que una clase tenga una única instancia y proporciona un punto
+                    de acceso global a ella.</li>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Singleton_UML_class_diagram.svg/1200px-Singleton_UML_class_diagram.svg.png"
+                    width="200">
+                <li><strong>Factory Method:</strong> Define una interfaz para crear un objeto, pero permite a las
+                    subclases decidir qué clase instanciar.</li>
+                <img src="https://reactiveprogramming.io/_next/image?url=%2Fbooks%2Fpatterns%2Fimg%2Fpatterns-articles%2Ffactory-method-diagram.png&w=1920&q=75"
+                    width="200">
+                <li><strong>Observer:</strong> Permite que un objeto notifique a otros objetos sobre cambios en su
+                    estado.</li>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRndHNtR5Ar9lFR8t0kqholal2z5srb8dAz4A&s" width="250">
+                <li><strong>Decorator:</strong> Permite añadir comportamientos o responsabilidades a un objeto de manera
+                    dinámica.</li>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Decorator_UML_class_diagram.svg/2560px-Decorator_UML_class_diagram.svg.png"
+                    width="200">
+            </ul>
+        </section>
+
+        <section>
+            <h2>Glosario de Terminología de UML</h2>
+            <ul>
+                <li><strong>Actor:</strong> Entidad externa al sistema, que puede ser un usuario, un sistema o una organización, que interactua con el sistema para alcanzar un objetivo.</li>
+
+                <li><strong>Asociación:</strong> Relación entre dos o más clases que indica que los objetos de una clase están conectados a los objetos de otra. Puede
+                ser unidireccional o bidireccional.</li>
+
+                <li><strong>Atributo:</strong> Propiedad o característica de una clase que describe los datos que pueden ser almacenados por las instancias (objetos)
+                de esa clase.</li>
+
+                <li><strong>Clase:</strong> Una plantilla para crear objetos, que define un conjunto de atributos y
+                    métodos.</li>
+
+                <li><strong>Composición:</strong> Plantilla que define los atributos y comportamientos de los objetos que pertenecen a ella. Es el núcleo de los diagramas
+                de clases.</li>
+
+                <li><strong>Componente:</strong> Tipo de relación entre clases donde una clase está compuesta de otras. Si la clase contenedora se destruye, las clases
+                componentes también se destruyen (relación fuerte).</li>
+
+                <li><strong>Dependencia:</strong> Relación entre dos elementos en la que un cambio en un elemento (dependiente) podría afectar al otro (del que depende).</li>
+
+                <li><strong>Encapsulamiento:</strong> Principio que consiste en ocultar los detalles internos de una clase, de manera que los datos solo puedan ser
+                manipulados a través de sus métodos públicos.</li>
+
+                <li><strong>Generalización:</strong> Relación de herencia entre clases, donde una clase hija (subclase) hereda atributos y métodos de una clase padre
+                (superclase).</li>
+
+                <li><strong>Herencia:</strong> Mecanismo por el cual una clase (subclase) hereda propiedades y comportamientos de otra clase (superclase). Es
+                representada como una flecha con línea sólida y un triángulo hueco en los diagramas de clases.</li>
+                
+                <li><strong>Instancia:</strong> Especificación de un objeto real que pertenece a una clase. En UML, una instancia se muestra en diagramas de objetos.</li>
+
+                <li><strong>interfaz</strong> Conjunto de operaciones que una clase o componente debe implementar. Define un contrato que las clases deben cumplir,
+                pero no especifica cómo hacerlo.</li>
+
+                <li><strong>Mensaje:</strong> Comunicación entre objetos en un diagrama de interacción (secuencia o comunicación) que indica la invocación de un
+                método o el paso de información.</li>
+
+                <li><strong>Método:</strong> Función o procedimiento definido en una clase que describe un comportamiento de sus objetos.</li>
+
+                <li><strong>Nodo:</strong> Elemento físico en un diagrama de despliegue que representa un dispositivo o máquina donde se ejecuta o almacena el
+                software.</li>
+
+                <li><strong>Objeto:</strong> Una instancia de una clase, que tiene un estado y un comportamiento.</li>
+
+                <li><strong>Paquete:</strong> Agrupación lógica de clases u otros elementos en un diagrama de paquetes. Sirve para organizar y estructurar grandes
+                sistemas.</li>
+
+                <li><strong>Polimorfismo:</strong> Capacidad de diferentes clases para responder de manera distinta al mismo mensaje o método. Facilita la flexibilidad del
+                código.</li>
+
+                <li><strong>Relación:</strong> Función o comportamiento específico que un objeto o actor adopta en una relación o interacción en un diagrama de casos
+                de uso o diagramas de interacción.</li>
+
+                <li><strong>Secuencia:</strong> Orden en el que ocurren las interacciones o los mensajes entre objetos. Se representa en los diagramas de secuencia.</li>
+
+                <li><strong>Estado:</strong> Situación o condición actual de un objeto en un diagrama de estados. Cambia como resultado de eventos o transiciones.</li>
+
+                <li><strong>Transición:</strong> Cambio de un objeto o sistema de un estado a otro en respuesta a un evento, representado en un diagrama de estados.</li>
+
+                <li><strong>Caso de uso:</strong> Descripción de cómo un actor externo interactúa con el sistema para lograr un objetivo. Modela los requisitos
+                funcionales del sistema.</li>
+
+                <li><strong>Visibilidad:</strong> Propiedad que define qué elementos pueden acceder a los atributos o métodos de una clase. Los niveles comunes son
+                público, privado, y protegido.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Informe elaborado por: Juan Felipe Gómez González</p>
+        <p>Fecha: 22 de septiembre de 2024</p>
+    </footer>
+</body>
+
+</html>
